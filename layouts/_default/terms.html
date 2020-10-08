@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <h1> Tags </h1>
+  <ul>
+  {{ range sort .Site.Taxonomies.tags "value" "desc" }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }}) </li>
+  {{ end }}
+  </ul>
+{{ end }}

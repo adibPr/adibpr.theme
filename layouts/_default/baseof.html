@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode}}">
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="container">
+          <div class="row">
+
+            <div id="lsidebar" class="col-2">
+            </div>
+
+            <div id="centerbar" class="col-8">
+              {{- partial "navigation.html" . -}}
+              <br>
+
+              {{- block "main" . }}{{- end }}
+            </div>
+
+            <div id="rsidebar" class="col-2">
+              {{- partial "rsidebar" . }}
+            </div>
+
+          </div>
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

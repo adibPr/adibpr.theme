@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <center>
+    <h1>{{ .Title }}</h1>
+    {{ partial "metadata.html" . }}
+    <br>
+    {{ with .Params.tags }}
+      {{ range . }}
+        {{ $href := print (absURL "tags/") (urlize .) }}
+        <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+      {{ end }}
+    {{ end }}
+  </center>
+  <br><br>
+
+  <div id="content">
+    {{ .Content }}
+  </div>
+
+{{ end }}

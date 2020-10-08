@@ -1,0 +1,42 @@
+body {
+    font-family: 'Lora', sans-serif;
+    margin-bottom: 1.5em;
+}
+
+#mynav {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: dashed 1px gray;
+    font-family: 'Inconsolata';
+}
+#mynav svg {
+    scale: 0.7;
+}
+
+
+#rsidebar {
+    text-align: center;
+}
+
+#list-content {
+    margin-bottom: 0em;
+    line-height: 1.5em;
+}
+
+#content {
+    line-height: 2em;
+    font-size: 1.1em;
+}
+
+#list-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.project {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+

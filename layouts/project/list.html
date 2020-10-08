@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <div id="list-project">
+    {{ range .Paginator.Pages }}
+        <p>
+          <div class="card project" style="width: 18rem;">
+
+            {{ with .Resources.GetMatch "cover.png" }}
+              <img class="card-img-top" src={{ .RelPermalink }} alt="Card image cap">
+            {{ end }}
+
+            <div class="card-body">
+              <h5 class="card-title">{{ .Title }}</h5>
+              <a href="{{ .RelPermalink }}" class="btn btn-primary" style="float: right"> Read </a>
+            </div>
+          </div>
+        </p>
+    {{ end }}
+  </div>
+  <br>
+  {{ template "_internal/pagination.html" . }}
+{{ end }}
