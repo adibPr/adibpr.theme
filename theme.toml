@@ -3,13 +3,19 @@
 
 name = "Mine"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = ""
+description = "Adib Simple Theme"
+homepage = "adibpr.github.io/"
 tags = []
 features = []
-min_version = "0.41"
+min_version = "0.1"
 
 [author]
-  name = "AdibSImple"
+  name = "Adib Pratama"
   homepage = ""
+
+[markup]
+  [markup.highlight]
+    style = "github"
+
+
