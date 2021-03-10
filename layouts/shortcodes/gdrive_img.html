@@ -1,0 +1,11 @@
+<center>
+  <div class="about-img">
+    <img src="https://drive.google.com/uc?export=view&id={{ .Get "id" }}"
+      alt="profile"
+      style="
+             width: {{ with .Get "width" }}{{.}};{{else}}50%;{{end}} 
+             height: {{ with .Get "height" }}{{.}};{{else}}60%;{{end}}"
+    >
+  </div>
+</center>
+<br>
