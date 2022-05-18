@@ -1,10 +1,18 @@
 body {
     font-family: 'PT Serif', serif;
     margin-bottom: 1.5em;
+    background-color: #2e2e2e;
+    color: #d6d6d6;
+}
+a {
+    color:  #e87d3e;
 }
 img {
     max-width: 100%;
     max-height: 100%;
+}
+pre code {
+    color: white;
 }
 
 #mynav {
@@ -43,6 +51,19 @@ img {
     align-items: flex-start;
 }
 
+#list-project .card-title {
+    color: #e87d3e;
+}
+
+#list-project .card {
+    border-color:#797979;
+}
+ 
+
+#list-project .card-body {
+    background-color:#2e2e2e;
+}
+
 .project {
     margin-left: 1em;
     margin-bottom: 1em;
@@ -52,4 +73,3 @@ img {
     margin-top: 1em;
     margin-bottom: 0em;
 }
-
