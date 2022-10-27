@@ -18,8 +18,47 @@ pre code {
 #mynav {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    /*border-bottom: dashed 1px gray;*/
     font-family: 'Alegreya';
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    grid-template-rows: 0.10fr 1fr 0.15fr;
+    grid-template-areas: 
+        "navigation navigation navigation"
+        "main main rsidebar"
+        "footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+#navigation {
+    grid-area: navigation;
+}
+#lsidebar {
+    grid-area: lsidebar;
+}
+#main {
+    grid-area: main;
+}
+#rsidebar {
+    grid-area: rsidebar;
+}
+#footer {
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 550px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.15fr 1fr 0.15fr;
+        grid-template-areas:
+            "navigation"
+            "main"
+            "footer";
+        grid-gap: 0.2rem;
+    }
 }
 
 #mynav svg {

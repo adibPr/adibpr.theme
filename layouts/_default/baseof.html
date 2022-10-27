@@ -3,24 +3,11 @@
     {{- partial "head.html" . -}}
     <body>
         <div class="container">
-          <div class="row">
-
-            <div id="lsidebar" class="col-2">
-            </div>
-
-            <div id="centerbar" class="col-8">
-              {{- partial "navigation.html" . -}}
-              <br>
-
-              {{- block "main" . }}{{- end }}
-            </div>
-
-            <div id="rsidebar" class="col-2">
-              {{- partial "rsidebar" . }}
-            </div>
-
-          </div>
+            <div id="navigation">{{- partial "navigation.html" . -}}</div>
+            <div id="lsidebar"></div>
+            <div id="main">{{- block "main" . }}{{- end }}</div>
+            <div id="rsidebar">{{- partial "rsidebar" . }}</div>
+            <div id="footer">{{- partial "footer.html" . -}}</div>
         </div>
-        {{- partial "footer.html" . -}}
     </body>
 </html>
