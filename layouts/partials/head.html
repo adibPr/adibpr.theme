@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="/css/mine.css">
   {{ $title := print .Site.Title "|" .Title }}
   {{ if .IsHome }}{{ $title  = .Site.Title }}{{ end }}
+  {{ partial "katex.html" . }}
   <title>{{ $title }}</title>
 
 </head>
