@@ -1,12 +1,18 @@
 body {
     font-family: 'PT Serif', serif;
-    margin-bottom: 1.5em;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
     background-color: #2e2e2e;
     color: #d6d6d6;
 }
 a {
     color:  #e87d3e;
 }
+
+p {
+    margin-bottom: 1.5rem;
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
