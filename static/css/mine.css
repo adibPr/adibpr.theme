@@ -1,8 +1,8 @@
 body {
     font-family: 'PT Serif', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    background-color: #2e2e2e;
+    background-color: #161b1d;
     color: #d6d6d6;
 }
 a {
@@ -30,11 +30,11 @@ pre code {
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 0.15fr 1fr 0.15fr;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
     grid-template-rows: 0.10fr 1fr 0.15fr;
     grid-template-areas: 
         "navigation navigation navigation"
-        "main main rsidebar"
+        "lsidebar main rsidebar"
         "footer footer footer";
     grid-gap: 0.2rem;
 }
@@ -73,11 +73,11 @@ pre code {
 
 #list-content {
     margin-bottom: 0em;
-    line-height: 1.5em;
+    line-height: 1.6;
 }
 
 #content {
-    line-height: 1.5em;
+    line-height: 1.6;
 }
 
 #content>h1,h2,h3,h4,h5,h6 {
