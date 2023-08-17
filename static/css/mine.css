@@ -55,25 +55,26 @@ pre code {
     grid-area: footer;
 }
 
-@media only screen and (max-width: 550px){
-    .container {
-        grid-template-columns: 1fr 0.05fr;
-        grid-template-rows: 0.15fr 1fr 0.15fr;
-        grid-template-areas:
-            "navigation navigation"
-            "main main"
-            "footer footer";
-        grid-gap: 0.2rem;
-    }
-}
-
 #mynav svg {
-    scale: 0.7;
+    scale: 0.8;
 }
 
-#list-content {
+
+/* Table of Contencts format */
+#toc {
+    width: 100%;
+}
+.toc-title {
     margin-bottom: 0em;
-    line-height: 1.6;
+    line-height: 2;
+    width: 85%;
+    color: blue;
+}
+
+.toc-date {
+    width: 15%;
+    font-size: 1rem;
+    text-align: right;
 }
 
 #content {
@@ -118,3 +119,47 @@ pre code {
     margin-top: 1em;
     margin-bottom: 0em;
 }
+
+/* Adaptive */
+@media only screen and (max-width: 550px){
+    .container {
+        grid-template-columns: 1fr 0.05fr;
+        grid-template-rows: 0.15fr 1fr 0.15fr;
+        grid-template-areas:
+            "navigation navigation"
+            "main main"
+            "footer footer";
+        grid-gap: 0.2rem;
+    }
+
+    .toc-title {
+        width: 70%;
+    }
+
+    .toc-date {
+        width: 30%;
+    }
+}
+
+
+
+/* Overwrite Bootstrap default pagination*/
+.page-link {
+    color: #e87d3e;
+    background-color: #fff0;
+    border: 1px solid #dee2e600;
+}
+.page-item.active .page-link {
+  color:#fff;
+  background-color:#007bff00;
+  border-color:#007bff00;
+}
+.page-item.disabled .page-link {
+  color:#6c757d;
+  pointer-events:none;
+  cursor:auto;
+  background-color:#fff0;
+  border-color:#dee2e600;
+}
+
+/* End Bootstrap */
