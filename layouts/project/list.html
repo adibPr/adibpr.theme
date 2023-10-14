@@ -12,6 +12,7 @@
 
             <div class="card-body">
               <h5 class="card-title">{{ .Title }}</h5>
+              <a style="font-size: 0.9rem;">{{ partial "metadata.html" . }}</a>
               <a href="{{ .RelPermalink }}" class="btn btn-primary" style="float: right"> Read </a>
             </div>
           </div>
