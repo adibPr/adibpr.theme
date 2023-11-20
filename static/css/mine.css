@@ -1,12 +1,27 @@
-body {
-    font-family: 'PT Serif', serif;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    background-color: #161b1d;
-    color: #d6d6d6;
+:root {
+  --theme: dark;
+  --font-color: #d6d6d6;
+  --background-color: #161b1d;
+  --link-color: #e87d3e;
+  --pre-code-color: white;
 }
-a {
-    color:  #e87d3e;
+
+body {
+    font-family: 'Alegreya', 'PT Serif', serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+a, 
+#mynav .nav-link,
+#theme .nav-link {
+    color: var(--link-color);
+    text-decoration: none; /* due to using bootstrap 5 */
+}
+a:hover {
+    text-decoration: underline;
 }
 
 p {
@@ -18,7 +33,7 @@ img {
     max-height: 100%;
 }
 pre code {
-    color: white;
+    color: var(--pre-code-color);
 }
 
 #mynav {
@@ -27,13 +42,19 @@ pre code {
     font-family: 'Alegreya';
 }
 
-.container {
+#theme > button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.containers {
     display: grid;
     height: 100vh;
-    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 0.7fr 1fr 0.7fr;
     grid-template-rows: 0.10fr 1fr 0.15fr;
-    grid-template-areas: 
-        "navigation navigation navigation"
+    grid-template-areas:
+        ". navigation theme"
         "lsidebar main rsidebar"
         "footer footer footer";
     grid-gap: 0.2rem;
@@ -53,6 +74,13 @@ pre code {
 }
 #footer {
     grid-area: footer;
+}
+
+#theme {
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    font-family: 'Alegreya';
+    grid-area: theme;
 }
 
 #mynav svg {
@@ -98,16 +126,24 @@ pre code {
 }
 
 #list-project .card-title {
-    color: #e87d3e;
+    color: var(--link-color);
 }
+
 
 #list-project .card {
     border-color:#797979;
+    border-radius: 0.1rem;
+    color: var(--font-color);
 }
- 
+
+#list-project .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 
 #list-project .card-body {
-    background-color:#2e2e2e;
+    background-color:var(--background-color);
 }
 
 .project {
@@ -122,11 +158,11 @@ pre code {
 
 /* Adaptive */
 @media only screen and (max-width: 550px){
-    .container {
+    .containers {
         grid-template-columns: 1fr 0.05fr;
         grid-template-rows: 0.15fr 1fr 0.15fr;
         grid-template-areas:
-            "navigation navigation"
+            "navigation theme"
             "main main"
             "footer footer";
         grid-gap: 0.2rem;
@@ -139,18 +175,24 @@ pre code {
     .toc-date {
         width: 30%;
     }
+
+    #main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 
 
-/* Overwrite Bootstrap default pagination*/
+/* Overwrite Bootstrap  */
+/* For pagination */
 .page-link {
-    color: #e87d3e;
+    color: var(--link-color);
     background-color: #fff0;
     border: 1px solid #dee2e600;
 }
 .page-item.active .page-link {
-  color:#fff;
+  color: var(--font-color);
   background-color:#007bff00;
   border-color:#007bff00;
 }

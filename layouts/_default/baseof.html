@@ -2,11 +2,14 @@
 <html lang="{{ .Site.LanguageCode}}">
     {{- partial "head.html" . -}}
     <body>
-        <div class="container">
+        <div class="containers">
             <div id="navigation">{{- partial "navigation.html" . -}}</div>
             <div id="lsidebar"></div>
             <div id="main">{{- block "main" . }}{{- end }}</div>
             <div id="rsidebar">{{- partial "rsidebar" . }}</div>
+            <div id="theme"> 
+                <a href="#" class="nav-link" onclick="changeTheme()"><i data-feather="sun"></i></a>
+            </div>
             <div id="footer">{{- partial "footer.html" . -}}</div>
         </div>
     </body>
