@@ -3,6 +3,10 @@
     <h1>{{ .Title }}</h1>
     {{ partial "metadata.html" . }}
     <br>
+    <b>{{ .Site.BaseURL }}</b>
+    <br>
+    <b>{{ absURL "tags/" }}</b>
+    <br>
     {{ with .Params.tags }}
       {{ range . }}
         {{ $href := print (absURL "tags/") (urlize .) }}
