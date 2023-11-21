@@ -2,14 +2,18 @@
   <center>
     <h1>{{ .Title }}</h1>
     {{ partial "metadata.html" . }}
-    <br>
-    <b>{{ .Site.BaseURL }}</b>
-    <br>
-    <b>{{ absURL "tags/" }}</b>
+    {{ $abs_url := .Permalink | absURL }}
+    {{ $base_url := urls.Parse $abs_url }}
+    {{ $host := "" }}
+    {{ if $base_url.Host }}
+        {{ $host := print $base_url.Host "://" }}
+    {{ else }}
+        {{ $host := "//" }}
+    {{ end }}
     <br>
     {{ with .Params.tags }}
       {{ range . }}
-        {{ $href := print (absURL "tags/") (urlize .) }}
+        {{ $href := print $host "/tags/" (urlize .)  }}
         <a class="btn btn-sm btn-outline-success tag-btn tag" href="{{ $href }}">{{ . }}</a>
       {{ end }}
     {{ end }}
