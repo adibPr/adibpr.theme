@@ -16,6 +16,4 @@ min_version = "0.1"
 
 [markup]
   [markup.highlight]
-    style = "github"
-
-
+    noclasses = false

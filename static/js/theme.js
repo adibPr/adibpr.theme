@@ -20,6 +20,13 @@ function updateTheme(theme) {
             document.documentElement.style.setProperty(key, theme[key]);
         }
     }
+    // change the css for syntax
+    var link = document.createElement("link");
+    link.href = "/css/syntax_" + theme['--theme'] +".css";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.media = "screen,print";
+    document.getElementsByTagName( "head" )[0].appendChild( link );
 }
 
 function changeTheme() {
